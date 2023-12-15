@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single</title>
+</head>
+<style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 8px;
+    }
+</style>
+<body>
+    <form action="/rapor-single/{{ data['id'] }}" method="GET">
+        <table>
+            <tr>
+                <th>nis</th>
+                <th>nama</th>
+                <th>nilai_mat</th>
+                <th>nilai_bindo</th>
+                <th>nilai_big</th>
+                <th>nilai_pjok</th>
+                <th>nilai_ipas</th>
+                <th>nilai_rpl</th>
+            </tr>
+            <tr>
+                <td>{{ data.nis }}</td>
+                <td>{{ data.nama }}</td>
+                <td>{{ data.nilai_mat }}</td>
+                <td>{{ data.nilai_bindo }}</td>
+                <td>{{ data.nilai_big }}</td>
+                <td>{{ data.nilai_pjok }}</td>
+                <td>{{ data.nilai_ipas }}</td>
+                <td>{{ data.nilai_rpl }}</td>
+            </tr>
+        </table>
+        <a href="/">Back</a>
+    </form>
+</body>
+</html>

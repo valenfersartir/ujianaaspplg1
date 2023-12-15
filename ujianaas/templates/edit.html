@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+</head>
+<body>
+    <form action="/edit/{{ data['id'] }}" method="POST">
+        <input type="number" value="{{ data['nis'] }}" id="nis" name="nis">
+        <input type="text" value="{{ data['nama'] }}" id="nama" name="nama">
+        <input type="number" value="{{ data['nilai_mat'] }}" id="nilai_mat" name="nilai_mat" min="0" max="100">
+        <input type="number" value="{{ data['nilai_bindo'] }}" id="nilai_bindo" name="nilai_bindo" min="0" max="100">
+        <input type="number" value="{{ data['nilai_big'] }}" id="nilai_big" name="nilai_big" min="0" max="100">
+        <input type="number" value="{{ data['nilai_pjok'] }}" id="nilai_pjok" name="nilai_pjok" min="0" max="100">
+        <input type="number" value="{{ data['nilai_ipas'] }}" id="nilai_ipas" name="nilai_ipas" min="0" max="100">
+        <input type="number" value="{{ data['nilai_rpl'] }}" id="nilai_rpl" name="nilai_rpl" min="0" max="100">
+        <input type="submit" value="edit">
+    </form>
+</body>
+</html>

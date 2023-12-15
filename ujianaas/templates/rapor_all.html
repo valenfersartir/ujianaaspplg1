@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATABASE</title>
+</head>
+<style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 8px;
+    }
+</style>
+<body>
+    <table>
+        <tr>
+            <th>nis</th>
+            <th>nama</th>
+            <th>nilai_mat</th>
+            <th>nilai_bindo</th>
+            <th>nilai_big</th>
+            <th>nilai_pjok</th>
+            <th>nilai_ipas</th>
+            <th>nilai_rpl</th>
+            <th>edit</th>
+            <th>Lihat</th>
+        </tr>
+        {% for rapor in rapors %}
+        <tr>
+            <td>{{ rapor.nis }}</td>
+            <td>{{ rapor.nama }}</td>
+            <td>{{ rapor.nilai_mat }}</td>
+            <td>{{ rapor.nilai_bindo }}</td>
+            <td>{{ rapor.nilai_big }}</td>
+            <td>{{ rapor.nilai_pjok }}</td>
+            <td>{{ rapor.nilai_ipas }}</td>
+            <td>{{ rapor.nilai_rpl }}</td>
+            <td><a href="/delete/{{ rapor['id'] }}" onclick="return confirm('Yakin?');">Hapus</a>
+            <a href="/edit/{{ rapor['id'] }}">Edit</a></td>
+            <td><a href="/rapor-single/{{ rapor['id'] }}">Lihat</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Back</a>
+</body>
+</html>
